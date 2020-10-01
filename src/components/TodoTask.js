@@ -6,7 +6,12 @@ class TodoTask extends React.Component {
     };
 
     render() {
-    return <li id={this.props.id}>{this.props.task}<button onClick={this.onDelete}>x</button></li>;
+        return (
+            <li id={this.props.id}>
+                {this.props.task}
+                <button onClick={this.onDelete}>x</button>
+            </li>
+        );
     };
 }
 

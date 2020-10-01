@@ -23,7 +23,7 @@ class NewTodo extends React.Component {
                 <button>Add</button>
             </form>
         );
-    }
+    };
 }
 
 export default NewTodo;
