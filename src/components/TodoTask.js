@@ -1,18 +1,12 @@
 import React from 'react';
 
-class TodoTask extends React.Component {
-    onDelete = (event) => {
-        this.props.onDelete(this.props.id);
-    };
-
-    render() {
-        return (
-            <li id={this.props.id}>
-                {this.props.task}
-                <button onClick={this.onDelete}>x</button>
-            </li>
-        );
-    };
-}
+const TodoTask = ({ id, task, onDelete }) => {
+    return (
+        <li id={id}>
+            {task}
+            <button onClick={() => onDelete(id)}>x</button>
+        </li>
+    );
+};
 
 export default TodoTask;
